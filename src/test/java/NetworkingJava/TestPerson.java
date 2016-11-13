@@ -1,4 +1,4 @@
-package networkingExample;
+package NetworkingJava;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

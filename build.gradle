@@ -17,6 +17,7 @@ jar {
 	version = "0.0.1"
 }
 
-
-apply plugin: 'application'
-mainClassName = 'hello.HelloWorld'
+if (project.hasProperty("mainClass")) {
+   apply plugin: 'application'
+   mainClassName = project.findProperty("mainClass")
+}

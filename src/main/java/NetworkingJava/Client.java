@@ -1,12 +1,17 @@
-// File Name Client.java
+package NetworkingJava;
+
 import java.net.*;
 import java.io.*;
 
 public class Client {
 
     public static void main(String [] args) {
-        String serverName = args[0];
-        int port = Integer.parseInt(args[1]);
+        String serverName = "127.0.0.1";
+        int port;
+        if (args.length > 0)
+            port = Integer.parseInt(args[0]);
+        else
+            port = 7777;
         try {
             System.out.println("Connecting to " + serverName
                     + " on port " + port);
